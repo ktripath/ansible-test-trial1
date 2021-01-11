@@ -1,0 +1,17 @@
+--- 
+- 
+  connection: local
+  gather_facts: false
+  hosts: Kinshuk_AmazonLinux
+  name: "Start instances"
+  tasks: 
+    - 
+      ec2: 
+        instance_ids: i-015b088fe0cfc2502
+        region: ap-southeast-1
+        state: running
+        wait: true
+      name: "Start the feature instances"
+  vars: 
+    instance_ids: i-015b088fe0cfc2502
+    region: ap-southeast-1
